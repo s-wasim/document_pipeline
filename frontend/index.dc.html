@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>window.__resources = {"https://unpkg.com/react@18.3.1/umd/react.production.min.js":"./vendor/react.production.min.js","https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js":"./vendor/react-dom.production.min.js"};</script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/cb84f059-5c7b-49ef-bd35-44be9527f800.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/c25a0a6d-62f4-4a20-910a-ea7d1a963a60.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/8005c35c-fd6a-4b86-9b7b-362ede9d173d.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/d07d3319-a74a-4b35-b01d-8ee2d745237f.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/d9df20c5-b5b6-4674-9988-d1e9150118c0.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/b713f0f3-22b0-45ab-a34f-130a5b5ee26f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/d2ba44db-c5ed-4e05-930e-2d913a92fde0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/cb84f059-5c7b-49ef-bd35-44be9527f800.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/c25a0a6d-62f4-4a20-910a-ea7d1a963a60.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/8005c35c-fd6a-4b86-9b7b-362ede9d173d.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/d07d3319-a74a-4b35-b01d-8ee2d745237f.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/d9df20c5-b5b6-4674-9988-d1e9150118c0.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/b713f0f3-22b0-45ab-a34f-130a5b5ee26f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 450;
+  font-display: swap;
+  src: url("./fonts/d2ba44db-c5ed-4e05-930e-2d913a92fde0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/cb84f059-5c7b-49ef-bd35-44be9527f800.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/c25a0a6d-62f4-4a20-910a-ea7d1a963a60.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/8005c35c-fd6a-4b86-9b7b-362ede9d173d.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/d07d3319-a74a-4b35-b01d-8ee2d745237f.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/d9df20c5-b5b6-4674-9988-d1e9150118c0.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/b713f0f3-22b0-45ab-a34f-130a5b5ee26f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/d2ba44db-c5ed-4e05-930e-2d913a92fde0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/cb84f059-5c7b-49ef-bd35-44be9527f800.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/c25a0a6d-62f4-4a20-910a-ea7d1a963a60.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/8005c35c-fd6a-4b86-9b7b-362ede9d173d.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/d07d3319-a74a-4b35-b01d-8ee2d745237f.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/d9df20c5-b5b6-4674-9988-d1e9150118c0.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/b713f0f3-22b0-45ab-a34f-130a5b5ee26f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/d2ba44db-c5ed-4e05-930e-2d913a92fde0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/cb84f059-5c7b-49ef-bd35-44be9527f800.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/c25a0a6d-62f4-4a20-910a-ea7d1a963a60.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/8005c35c-fd6a-4b86-9b7b-362ede9d173d.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/d07d3319-a74a-4b35-b01d-8ee2d745237f.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/d9df20c5-b5b6-4674-9988-d1e9150118c0.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/b713f0f3-22b0-45ab-a34f-130a5b5ee26f.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/d2ba44db-c5ed-4e05-930e-2d913a92fde0.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/3ce4a08a-981b-4239-ad06-9cb99ad7f58f.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/a4c31afd-1925-464a-bd28-7ca1740bf281.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/a69b50d1-614f-4db2-b92a-ce0efb59a9c0.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/8dec0777-c7fe-40d2-bc4d-5251b940e25b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/4bb4b084-24f8-4836-834c-5a3a69de91af.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/b87b59cb-c5f8-4fd5-bdf0-f60439a07e1b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/3ce4a08a-981b-4239-ad06-9cb99ad7f58f.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/a4c31afd-1925-464a-bd28-7ca1740bf281.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/a69b50d1-614f-4db2-b92a-ce0efb59a9c0.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/8dec0777-c7fe-40d2-bc4d-5251b940e25b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/4bb4b084-24f8-4836-834c-5a3a69de91af.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/b87b59cb-c5f8-4fd5-bdf0-f60439a07e1b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/3ce4a08a-981b-4239-ad06-9cb99ad7f58f.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/a4c31afd-1925-464a-bd28-7ca1740bf281.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/a69b50d1-614f-4db2-b92a-ce0efb59a9c0.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/8dec0777-c7fe-40d2-bc4d-5251b940e25b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/4bb4b084-24f8-4836-834c-5a3a69de91af.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./fonts/b87b59cb-c5f8-4fd5-bdf0-f60439a07e1b.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+  <script src="./adapter.js"></script>
+  <style>
+    body { margin: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    * { box-sizing: border-box; }
+    ::selection { background: rgba(96,165,250,0.35); }
+    @keyframes vr-drawIn { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+    @keyframes vr-pulse1 { 0%,100% { opacity: 1; } 40% { opacity: 0.35; } }
+    @keyframes vr-shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-4px); } 40% { transform: translateX(4px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(3px); } }
+    @keyframes vr-glow { 0%,100% { box-shadow: 0 0 0 0 rgba(96,165,250,0); } 50% { box-shadow: 0 0 0 6px rgba(96,165,250,0.12); } }
+    @keyframes vr-sealpop { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+    @keyframes vr-drift1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-20px); } }
+    @keyframes vr-drift2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-25px,25px); } }
+    @keyframes vr-spin { to { transform: rotate(360deg); } }
+    @keyframes vr-flyin { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    a { color: #3b82f6; }
+    a:hover { color: #60a5fa; }
+    input:focus, textarea:focus { outline: none; }
+  </style>
+</helmet>
+
+<div style="position:relative; width:100%; height:100vh; overflow:hidden; background:{{ colors.bg }}; transition:background 350ms ease; font-family:'Inter',sans-serif;">
+
+  <div style="position:absolute; inset:0; overflow:hidden; pointer-events:none;">
+    <div style="position:absolute; width:520px; height:520px; top:-120px; left:-80px; border-radius:50%; filter:blur(80px); background:{{ colors.glow1 }}; animation:vr-drift1 22s ease-in-out infinite;"></div>
+    <div style="position:absolute; width:460px; height:460px; bottom:-140px; right:-60px; border-radius:50%; filter:blur(80px); background:{{ colors.glow2 }}; animation:vr-drift2 26s ease-in-out infinite;"></div>
+  </div>
+
+  <sc-if value="{{ showSplash }}" hint-placeholder-val="{{ true }}">
+    <div style="position:absolute; inset:0; z-index:200; display:flex; align-items:center; justify-content:center; background:{{ colors.bg }}; opacity:{{ splashOpacity }}; transition:opacity 400ms ease; pointer-events:none;">
+      <svg width="96" height="96" sc-camel-view-box="0 0 64 64" fill="none">
+        <rect width="64" height="64" rx="14" fill="#1e293b"></rect>
+        <path d="M8 16 L19 32 L8 48" stroke="#1e40af" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" sc-camel-path-length="1" style="stroke-dasharray:1; stroke-dashoffset:1; animation:vr-drawIn 500ms 0ms ease forwards;"></path>
+        <path d="M26 16 L37 32 L26 48" stroke="#3b82f6" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" sc-camel-path-length="1" style="stroke-dasharray:1; stroke-dashoffset:1; animation:vr-drawIn 500ms 160ms ease forwards;"></path>
+        <path d="M44 16 L55 32 L44 48" stroke="#60a5fa" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" sc-camel-path-length="1" style="stroke-dasharray:1; stroke-dashoffset:1; animation:vr-drawIn 500ms 320ms ease forwards;"></path>
+      </svg>
+    </div>
+  </sc-if>
+
+  <div style="position:relative; z-index:1; display:flex; flex-direction:column; height:100%;">
+
+    <!-- TOP BAR -->
+    <div style="display:flex; align-items:center; gap:16px; padding:12px 20px; background:{{ colors.glassBg }}; backdrop-filter:blur(16px) saturate(140%); -webkit-backdrop-filter:blur(16px) saturate(140%); border-bottom:1px solid {{ colors.glassBrd }}; transition:background 350ms ease, border-color 350ms ease;">
+
+      <div sc-camel-on-click="{{ pulseLogo }}" style="cursor:pointer;">
+        <svg width="150" height="{{ bannerH }}" sc-camel-view-box="0 0 180 56" fill="none">
+          <rect width="180" height="56" rx="8" fill="{{ colors.bannerTile }}" stroke="{{ colors.bannerStroke }}" stroke-width="{{ colors.bannerStrokeW }}"></rect>
+          <path d="M18 14 L29 28 L18 42" stroke="#1e40af" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" style="{{ chevronStyle0 }}"></path>
+          <path d="M33 14 L44 28 L33 42" stroke="#3b82f6" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" style="{{ chevronStyle1 }}"></path>
+          <path d="M48 14 L59 28 L48 42" stroke="#60a5fa" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" style="{{ chevronStyle2 }}"></path>
+          <text x="72" y="35" font-family="Inter, sans-serif" font-size="19" font-weight="600" letter-spacing="-0.19"><tspan fill="{{ colors.bannerText }}">VeloRel</tspan><tspan fill="#3b82f6">AI</tspan></text>
+        </svg>
+      </div>
+
+      <div style="flex:1;"></div>
+
+      <div sc-camel-on-click="{{ jumpToReview }}" style="display:flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; background:{{ colors.glassBg }}; border:1px solid {{ colors.glassBrd }}; cursor:pointer; transition:border-color 200ms ease, transform 200ms ease;" style-hover="border-color:{{ colors.glassBrdH }}; transform:translateY(-1px);">
+        <div style="width:7px; height:7px; border-radius:50%; background:#60a5fa; box-shadow:0 0 8px rgba(96,165,250,0.7);"></div>
+        <span style="font-size:13px; color:{{ colors.textHi }}; font-weight:500;">{{ queueCount }} awaiting review</span>
+      </div>
+
+      <div sc-camel-on-click="{{ toggleTheme }}" style="display:flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:{{ colors.glassBg }}; border:1px solid {{ colors.glassBrd }}; cursor:pointer; transition:border-color 200ms ease;" style-hover="border-color:{{ colors.glassBrdH }};">
+        <span style="font-size:15px;">{{ themeIcon }}</span>
+      </div>
+
+      <div title="{{ healthTitle }}" style="width:9px; height:9px; border-radius:50%; background:{{ healthColor }}; box-shadow:0 0 6px {{ healthColor }};"></div>
+    </div>
+
+    <sc-if value="{{ showHealthBanner }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:8px 20px; background:rgba(248,113,113,0.14); border-bottom:1px solid rgba(248,113,113,0.3); color:#f87171; font-size:13px;">{{ healthBannerText }}</div>
+    </sc-if>
+
+    <!-- BODY -->
+    <div style="flex:1; display:flex; min-height:0;">
+
+      <!-- NAV RAIL -->
+      <div style="width:196px; flex-shrink:0; display:flex; flex-direction:column; gap:4px; padding:16px 12px; background:{{ colors.glassBg }}; border-right:1px solid {{ colors.glassBrd }}; transition:background 350ms ease, border-color 350ms ease;">
+
+        <sc-for list="{{ navItems }}" as="nav" hint-placeholder-count="3">
+          <div sc-camel-on-click="{{ nav.onClick }}" style="position:relative; display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:10px; cursor:pointer; margin-bottom:2px; background:{{ nav.bg }}; transition:background 200ms ease, transform 200ms ease;" style-hover="transform:translateX(2px);">
+            <div style="position:absolute; left:0; top:6px; bottom:6px; width:3px; border-radius:2px; background:{{ nav.barBg }}; opacity:{{ nav.barOpacity }}; transition:opacity 250ms ease;"></div>
+            <span style="font-size:16px; margin-left:4px;">{{ nav.icon }}</span>
+            <span style="font-size:14px; font-weight:500; color:{{ nav.textColor }};">{{ nav.label }}</span>
+            <sc-if value="{{ nav.showBadge }}" hint-placeholder-val="{{ false }}">
+              <span style="margin-left:auto; font-size:11px; font-family:'JetBrains Mono',monospace; padding:1px 6px; border-radius:999px; background:rgba(96,165,250,0.18); color:{{ colors.relay3 }};">{{ nav.badgeCount }}</span>
+            </sc-if>
+          </div>
+        </sc-for>
+
+        <div style="height:1px; background:{{ colors.glassBrd }}; margin:10px 2px;"></div>
+        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:{{ colors.textLo }}; padding:4px 12px 6px;">Samples</div>
+
+        <sc-for list="{{ sampleChips }}" as="chip" hint-placeholder-count="4">
+          <div sc-camel-on-click="{{ chip.onClick }}" style="padding:9px 12px; border-radius:10px; cursor:pointer; background:{{ colors.glassBg }}; border:1px solid {{ colors.glassBrd }}; margin-bottom:6px; font-size:12.5px; color:{{ colors.textLo }}; transition:background 200ms ease, color 200ms ease, border-color 200ms ease;" style-hover="background:{{ colors.glassBrdH }}22; color:{{ colors.textHi }}; border-color:{{ colors.glassBrdH }};">
+            {{ chip.label }}
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- ACTIVE PANEL -->
+      <div style="flex:1; min-width:0; padding:22px 28px; overflow-y:auto;">
+        <div style="max-width:1180px; margin:0 auto; opacity:{{ panelOpacity }}; transform:{{ panelTransform }}; transition:opacity 260ms ease, transform 260ms ease;">
+
+          <!-- ============ UPLOAD PANEL ============ -->
+          <sc-if value="{{ isUploadPanel }}" hint-placeholder-val="{{ true }}">
+            <div>
+              <h1 style="font-size:22px; font-weight:600; letter-spacing:-0.01em; color:{{ colors.textHi }}; margin:0 0 4px;">Upload a document</h1>
+              <p style="font-size:13.5px; color:{{ colors.textLo }}; margin:0 0 20px;">PDF, PNG or JPG · classified, extracted and validated automatically.</p>
+
+              <sc-if value="{{ showDropzone }}" hint-placeholder-val="{{ true }}">
+                <div>
+                  <div sc-camel-on-click="{{ browseFiles }}" sc-camel-on-drag-over="{{ onDragOver }}" sc-camel-on-drag-leave="{{ onDragLeave }}" sc-camel-on-drop="{{ onDrop }}" style="position:relative; height:260px; border-radius:16px; background:{{ colors.insetBg }}; backdrop-filter:blur(8px); border:2px dashed {{ dropzoneBorder }}; display:flex; align-items:center; justify-content:center; cursor:pointer; transform:{{ dropzoneScale }}; transition:border-color 200ms ease, transform 200ms ease; animation:{{ dropzoneShakeAnim }};">
+                    <input type="file" ref="{{ fileInputRef }}" sc-camel-on-change="{{ onFileInputChange }}" accept=".pdf,.png,.jpg,.jpeg" style="display:none;">
+                    <div style="position:absolute; opacity:0.16;">
+                      <svg width="96" height="96" sc-camel-view-box="0 0 204 204" fill="none">
+                        <rect x="2" y="2" width="200" height="200" rx="44" fill="{{ colors.iconTile }}" stroke="{{ colors.iconTileStroke }}" stroke-width="2"></rect>
+                        <path d="M41 60 L71 102 L41 144" stroke="#1e40af" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M87 60 L117 102 L87 144" stroke="#3b82f6" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M133 60 L163 102 L133 144" stroke="#60a5fa" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </div>
+                    <div style="position:relative; text-align:center;">
+                      <div style="font-size:15px; font-weight:500; color:{{ colors.textHi }}; margin-bottom:6px;">Drop a document here, or click to browse</div>
+                      <div style="font-size:12px; font-family:'JetBrains Mono',monospace; color:{{ colors.textLo }};">.pdf .png .jpg · ≤15 MB · ≤20 pages</div>
+                    </div>
+                  </div>
+                  <sc-if value="{{ uploadError }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:12px; padding:10px 14px; border-radius:10px; background:rgba(248,113,113,0.12); border:1px solid rgba(248,113,113,0.3); color:#f87171; font-size:13px;">{{ uploadError }}</div>
+                  </sc-if>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ showFileCard }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:20px; border-radius:16px; background:{{ colors.glassBg }}; backdrop-filter:blur(16px); border:1px solid {{ colors.glassBrdH }}; animation:vr-flyin 320ms ease;">
+                  <div style="display:flex; align-items:center; gap:14px;">
+                    <div style="width:44px; height:44px; border-radius:10px; background:{{ colors.insetBg }}; display:flex; align-items:center; justify-content:center; font-size:20px;">{{ fileMimeIcon }}</div>
+                    <div style="flex:1;">
+                      <div style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; color:{{ colors.textHi }};">{{ uploadFile.filename }}</div>
+                      <div style="font-size:12.5px; color:{{ colors.textLo }}; margin-top:2px;">{{ uploadFile.sizeMb }} MB · {{ uploadFile.pages }} pages · {{ uploadFile.mime }}</div>
+                    </div>
+                    <div sc-camel-on-click="{{ startRunClick }}" style="position:relative; overflow:hidden; padding:11px 22px; border-radius:10px; background:{{ colors.relayGradient }}; color:#fff; font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 4px 14px rgba(59,130,246,0.35); transition:transform 200ms ease;" style-hover="transform:translateY(-2px);">
+                      Run Pipeline
+                    </div>
+                  </div>
+                </div>
+              </sc-if>
+
+              <!-- ===== PIPELINE MAP ===== -->
+              <sc-if value="{{ showMap }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:22px; border-radius:16px; background:{{ colors.glassBg }}; backdrop-filter:blur(24px); border:1px solid {{ colors.glassBrdH }}; box-shadow:{{ colors.shadow }};" aria-live="polite">
+
+                  <div style="display:flex; align-items:center; margin-bottom:18px;">
+                    <div style="font-size:13px; color:{{ colors.textLo }}; font-family:'JetBrains Mono',monospace;">{{ runFilename }}</div>
+                    <div style="flex:1;"></div>
+                    <div style="display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:999px; background:{{ colors.insetBg }};">
+                      <span style="font-size:11px; color:{{ colors.textLo }};">LLM calls</span>
+                      <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:600; color:{{ colors.relay3 }};">{{ llmCallsDisplay }}/3</span>
+                    </div>
+                  </div>
+
+                  <!-- main track -->
+                  <div style="display:grid; grid-template-columns:repeat(5,1fr); align-items:center; gap:4px;">
+                    <sc-for list="{{ mainTrackNodes }}" as="n" hint-placeholder-count="5">
+                      <div style="display:flex; align-items:center;">
+                        <div sc-camel-on-click="{{ n.onClick }}" style="flex:1; text-align:center; padding:10px 6px; border-radius:10px; cursor:pointer; background:{{ n.bg }}; border:1px solid {{ n.border }}; transition:background 300ms ease, border-color 300ms ease, opacity 300ms ease; opacity:{{ n.opacity }};">
+                          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:{{ n.textColor }};">{{ n.label }}</div>
+                        </div>
+                        <sc-if value="{{ n.showConnector }}" hint-placeholder-val="{{ true }}">
+                          <div style="width:16px; height:2px; background:{{ n.connectorBg }}; transition:background 300ms ease;"></div>
+                        </sc-if>
+                      </div>
+                    </sc-for>
+                  </div>
+
+                  <!-- branch row -->
+                  <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin-top:10px;">
+                    <div></div>
+                    <div style="text-align:center;">
+                      <div style="width:2px; height:14px; background:{{ branchGuardConnBg }}; margin:0 auto;"></div>
+                      <div sc-camel-on-click="{{ markUnsupportedClick }}" style="padding:8px 4px; border-radius:10px; cursor:pointer; background:{{ markUnsupportedBg }}; border:1px solid {{ markUnsupportedBorder }}; opacity:{{ markUnsupportedOpacity }}; transition:all 300ms ease;">
+                        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:{{ markUnsupportedTextColor }};">mark_unsupported</div>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div style="text-align:center;">
+                      <div style="width:2px; height:14px; background:{{ repairConnBg }}; margin:0 auto;"></div>
+                      <div sc-camel-on-click="{{ repairClick }}" style="padding:8px 4px; border-radius:10px; cursor:pointer; background:{{ repairBg }}; border:1px dashed {{ repairBorder }}; opacity:{{ repairOpacity }}; transition:all 300ms ease; position:relative;">
+                        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:{{ repairTextColor }};">repair_extract</div>
+                        <sc-if value="{{ showRepairTag }}" hint-placeholder-val="{{ false }}">
+                          <div style="position:absolute; top:-9px; right:-6px; font-size:9px; padding:1px 5px; border-radius:999px; background:#fbbf24; color:#1e293b; font-weight:700;">1/1</div>
+                        </sc-if>
+                      </div>
+                    </div>
+                    <div style="text-align:center;">
+                      <div style="width:2px; height:14px; background:{{ failedConnBg }}; margin:0 auto;"></div>
+                      <div sc-camel-on-click="{{ queueFailedClick }}" style="padding:8px 4px; border-radius:10px; cursor:pointer; background:{{ queueFailedBg }}; border:1px solid {{ queueFailedBorder }}; opacity:{{ queueFailedOpacity }}; transition:all 300ms ease;">
+                        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600; color:{{ queueFailedTextColor }};">queue_failed</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- trace rows -->
+                  <sc-if value="{{ hasTraceRows }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:18px; display:flex; flex-direction:column; gap:8px;">
+                      <sc-for list="{{ traceRows }}" as="row" hint-placeholder-count="0">
+                        <div>
+                          <div sc-camel-on-click="{{ row.toggle }}" style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:{{ colors.textLo }}; cursor:pointer; padding:2px 0;">{{ row.chevron }} {{ row.label }}</div>
+                          <sc-if value="{{ row.open }}" hint-placeholder-val="{{ false }}">
+                            <pre style="margin:4px 0 0; padding:12px; border-radius:8px; background:{{ colors.insetBg }}; font-family:'JetBrains Mono',monospace; font-size:11.5px; color:{{ colors.textHi }}; overflow-x:auto;">{{ row.json }}</pre>
+                          </sc-if>
+                        </div>
+                      </sc-for>
+                    </div>
+                  </sc-if>
+
+                  <!-- terminal seal -->
+                  <sc-if value="{{ showTerminal }}" hint-placeholder-val="{{ false }}">
+                    <div style="margin-top:20px; padding-top:18px; border-top:1px solid {{ colors.glassBrd }};">
+
+                      <sc-if value="{{ isNeedsReview }}" hint-placeholder-val="{{ false }}">
+                        <div style="animation:vr-sealpop 380ms ease;">
+                          <div style="display:inline-block; padding:4px 12px; border-radius:999px; background:rgba(52,211,153,0.15); color:#34d399; font-size:12px; font-weight:600; font-family:'JetBrains Mono',monospace; margin-bottom:10px;">needs_review</div>
+                          <div style="font-size:14px; color:{{ colors.textHi }}; margin-bottom:14px;">Status: needs_review — ready for human review.</div>
+                          <div sc-camel-on-click="{{ reviewNowClick }}" style="display:inline-block; padding:10px 20px; border-radius:10px; background:{{ colors.relayGradient }}; color:#fff; font-weight:600; font-size:13.5px; cursor:pointer;">Review now →</div>
+                        </div>
+                      </sc-if>
+
+                      <sc-if value="{{ isFailedValidation }}" hint-placeholder-val="{{ false }}">
+                        <div style="animation:vr-sealpop 380ms ease;">
+                          <div style="display:inline-block; padding:4px 12px; border-radius:999px; background:rgba(248,113,113,0.15); color:#f87171; font-size:12px; font-weight:600; font-family:'JetBrains Mono',monospace; margin-bottom:10px;">failed_validation</div>
+                          <div style="font-size:13.5px; font-weight:500; color:{{ colors.textHi }}; margin:4px 0 8px;">Validation Errors</div>
+                          <div style="padding:12px 14px; border-radius:10px; background:{{ colors.insetBg }}; display:flex; flex-direction:column; gap:6px; margin-bottom:14px;">
+                            <sc-for list="{{ terminalErrors }}" as="err" hint-placeholder-count="2">
+                              <div style="font-size:12.5px; color:#f87171; font-family:'JetBrains Mono',monospace;">• {{ err }}</div>
+                            </sc-for>
+                          </div>
+                          <div sc-camel-on-click="{{ reviewNowClick }}" style="display:inline-block; padding:10px 20px; border-radius:10px; background:{{ colors.relayGradient }}; color:#fff; font-weight:600; font-size:13.5px; cursor:pointer;">Review now →</div>
+                        </div>
+                      </sc-if>
+
+                      <sc-if value="{{ isUnsupported }}" hint-placeholder-val="{{ false }}">
+                        <div style="animation:vr-sealpop 380ms ease;">
+                          <div style="display:inline-block; padding:4px 12px; border-radius:999px; background:rgba(251,191,36,0.15); color:#fbbf24; font-size:12px; font-weight:600; font-family:'JetBrains Mono',monospace; margin-bottom:10px;">unsupported</div>
+                          <div style="font-size:14px; color:{{ colors.textHi }};">Classified as <b style="font-family:'JetBrains Mono',monospace;">{{ terminalDocType }}</b> — this document type isn't supported yet.</div>
+                        </div>
+                      </sc-if>
+
+                      <div sc-camel-on-click="{{ resetUpload }}" style="margin-top:16px; display:inline-block; padding:8px 16px; border-radius:8px; background:transparent; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textLo }}; font-size:13px; cursor:pointer;">Upload another</div>
+                    </div>
+                  </sc-if>
+
+                </div>
+              </sc-if>
+
+            </div>
+          </sc-if>
+
+          <!-- ============ REVIEW QUEUE PANEL ============ -->
+          <sc-if value="{{ isReviewPanel }}" hint-placeholder-val="{{ false }}">
+            <div>
+              <h1 style="font-size:22px; font-weight:600; letter-spacing:-0.01em; color:{{ colors.textHi }}; margin:0 0 14px;">Review Queue</h1>
+
+              <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;">
+                <sc-for list="{{ filterChips }}" as="f" hint-placeholder-count="5">
+                  <div sc-camel-on-click="{{ f.onClick }}" style="padding:7px 14px; border-radius:999px; font-size:12.5px; font-weight:500; cursor:pointer; background:{{ f.bg }}; border:1px solid {{ f.border }}; color:{{ f.textColor }}; transition:all 200ms ease;">{{ f.label }}</div>
+                </sc-for>
+              </div>
+
+              <sc-if value="{{ reviewEmpty }}" hint-placeholder-val="{{ false }}">
+                <div style="text-align:center; padding:60px 20px; opacity:0.7;">
+                  <svg width="72" height="72" sc-camel-view-box="0 0 204 204" fill="none" style="margin-bottom:14px;">
+                    <rect x="2" y="2" width="200" height="200" rx="44" fill="{{ colors.iconTile }}" stroke="{{ colors.iconTileStroke }}" stroke-width="2"></rect>
+                    <path d="M41 60 L71 102 L41 144" stroke="#1e40af" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"></path>
+                    <path d="M87 60 L117 102 L87 144" stroke="#3b82f6" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"></path>
+                    <path d="M133 60 L163 102 L133 144" stroke="#60a5fa" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"></path>
+                  </svg>
+                  <div style="color:{{ colors.textLo }}; font-size:14px;">No documents match the current filter.</div>
+                </div>
+              </sc-if>
+
+              <div style="display:flex; flex-direction:column; gap:12px;">
+                <sc-for list="{{ reviewDocs }}" as="doc" hint-placeholder-count="0">
+                  <div style="border-radius:16px; background:{{ doc.cardBg }}; border:1px solid {{ doc.cardBorder }}; backdrop-filter:blur(16px); overflow:hidden; transition:border-color 200ms ease;">
+                    <div style="padding:16px 18px; display:flex; align-items:center; gap:16px;">
+                      <div style="flex:1; min-width:0;">
+                        <div style="font-family:'JetBrains Mono',monospace; font-weight:600; font-size:14px; color:{{ colors.textHi }};">{{ doc.filename }}</div>
+                        <div style="font-size:12.5px; color:{{ colors.textLo }}; margin-top:3px;">Type: {{ doc.docType }} · Pages: {{ doc.pages }} · LLM: {{ doc.llmCalls }}</div>
+                        <sc-if value="{{ doc.hasNote }}" hint-placeholder-val="{{ false }}">
+                          <div style="font-size:12px; color:{{ colors.textLo }}; margin-top:3px; font-style:italic;">Note: {{ doc.note }}</div>
+                        </sc-if>
+                      </div>
+                      <div style="padding:4px 11px; border-radius:999px; font-size:11.5px; font-weight:600; background:{{ doc.statusBg }}; color:{{ doc.statusColor }};">{{ doc.statusLabel }}</div>
+                      <sc-if value="{{ doc.showReviewBtn }}" hint-placeholder-val="{{ false }}">
+                        <div sc-camel-on-click="{{ doc.toggleOpen }}" style="padding:8px 16px; border-radius:8px; background:{{ colors.relayGradient }}; color:#fff; font-size:13px; font-weight:600; cursor:pointer;">{{ doc.reviewLabel }}</div>
+                      </sc-if>
+                    </div>
+
+                    <sc-if value="{{ doc.isOpen }}" hint-placeholder-val="{{ false }}">
+                      <div style="padding:18px; border-top:1px solid {{ colors.glassBrd }}; background:{{ colors.insetBg }}; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:18px; animation:vr-flyin 280ms ease; opacity:{{ doc.sealOpacity }};">
+
+                        <!-- preview -->
+                        <div style="min-width:0; border-radius:12px; background:#fdfdfd; padding:14px; max-height:520px; overflow-y:auto; display:flex; flex-direction:column; gap:14px;">
+                          <sc-for list="{{ doc.detail.pages }}" as="pg" hint-placeholder-count="1">
+                            <div style="background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,0.12); padding:20px; font-family:Georgia,serif; color:#1a1a1a; min-height:200px; position:relative;">
+                              <img src="{{ pg.src }}" style="display:block; width:100%; height:auto; border-radius:2px;" />
+                              <div style="position:absolute; bottom:6px; right:10px; font-family:'JetBrains Mono',monospace; font-size:9px; color:#999;">Page {{ pg.num }} of {{ doc.detail.pageCount }}</div>
+                            </div>
+                          </sc-for>
+                        </div>
+
+                        <!-- editor -->
+                        <div style="min-width:0;">
+                          <sc-if value="{{ doc.detail.noExtraction }}" hint-placeholder-val="{{ false }}">
+                            <div style="color:{{ colors.textLo }}; font-size:13.5px;">No extraction data available for this document.</div>
+                          </sc-if>
+
+                          <sc-if value="{{ doc.detail.hasExtraction }}" hint-placeholder-val="{{ false }}">
+                            <div>
+                              <div style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:10px; margin-bottom:14px;">
+                                <sc-for list="{{ doc.detail.fields }}" as="fld" hint-placeholder-count="8">
+                                  <div style="min-width:0;{{ fld.span }}">
+                                    <label style="font-size:11px; color:{{ colors.textLo }}; display:block; margin-bottom:4px;">{{ fld.label }}</label>
+                                    <div style="position:relative;">
+                                      <input value="{{ fld.value }}" sc-camel-on-change="{{ fld.onChange }}" style="width:100%; padding:9px 30px 9px 11px; border-radius:8px; background:{{ colors.insetBg }}; border:1px solid {{ fld.borderColor }}; color:{{ colors.textHi }}; font-size:13px; font-family:{{ fld.fontFamily }};" aria-describedby="{{ fld.errId }}">
+                                      <div title="{{ fld.badgeTitle }}" style="position:absolute; right:9px; top:50%; transform:translateY(-50%); width:9px; height:9px; border-radius:50%; background:{{ fld.badgeColor }};"></div>
+                                    </div>
+                                    <sc-if value="{{ fld.hasError }}" hint-placeholder-val="{{ false }}">
+                                      <div id="{{ fld.errId }}" style="font-size:11px; color:#f87171; margin-top:3px;">{{ fld.error }}</div>
+                                    </sc-if>
+                                  </div>
+                                </sc-for>
+                              </div>
+
+                              <sc-if value="{{ doc.detail.isInvoice }}" hint-placeholder-val="{{ false }}">
+                                <div style="margin-bottom:10px;">
+                                  <div style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,0.7fr) minmax(0,1fr) minmax(0,1fr) 24px; gap:6px; font-size:10.5px; color:{{ colors.textLo }}; padding:0 4px 6px;">
+                                    <div>DESCRIPTION</div><div>QTY</div><div>UNIT PRICE</div><div>LINE TOTAL</div><div></div>
+                                  </div>
+                                  <sc-for list="{{ doc.detail.items }}" as="it" hint-placeholder-count="4">
+                                    <div>
+                                      <div style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,0.7fr) minmax(0,1fr) minmax(0,1fr) 24px; gap:6px; align-items:center; margin-bottom:5px;">
+                                        <input value="{{ it.description }}" sc-camel-on-change="{{ it.onDesc }}" style="padding:7px 9px; border-radius:6px; background:{{ colors.insetBg }}; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textHi }}; font-size:12.5px;">
+                                        <input value="{{ it.qty }}" sc-camel-on-change="{{ it.onQty }}" style="padding:7px 9px; border-radius:6px; background:{{ colors.insetBg }}; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textHi }}; font-size:12.5px; font-family:'JetBrains Mono',monospace;">
+                                        <input value="{{ it.unit_price }}" sc-camel-on-change="{{ it.onUnit }}" style="padding:7px 9px; border-radius:6px; background:{{ colors.insetBg }}; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textHi }}; font-size:12.5px; font-family:'JetBrains Mono',monospace;">
+                                        <input value="{{ it.line_total }}" sc-camel-on-change="{{ it.onLineTotal }}" style="padding:7px 9px; border-radius:6px; background:{{ colors.insetBg }}; border:1px solid {{ it.lineBorder }}; color:{{ colors.textHi }}; font-size:12.5px; font-family:'JetBrains Mono',monospace;">
+                                        <div sc-camel-on-click="{{ it.onRemove }}" style="text-align:center; cursor:pointer; color:{{ colors.textLo }}; font-size:14px;">×</div>
+                                      </div>
+                                      <sc-if value="{{ it.hasError }}" hint-placeholder-val="{{ false }}">
+                                        <div style="font-size:11px; color:#f87171; margin:-2px 0 6px 2px;">{{ it.error }}</div>
+                                      </sc-if>
+                                    </div>
+                                  </sc-for>
+                                  <div sc-camel-on-click="{{ doc.detail.addItem }}" style="padding:7px 10px; border-radius:6px; border:1px dashed {{ colors.glassBrd }}; color:{{ colors.textLo }}; font-size:12px; cursor:pointer; text-align:center;">+ Add item</div>
+                                  <div style="margin-top:8px; font-size:12.5px; color:{{ doc.detail.itemsStatusColor }};">{{ doc.detail.itemsStatusText }}</div>
+                                </div>
+                              </sc-if>
+
+                              <div style="display:flex; align-items:center; gap:10px; margin-top:16px; padding-top:14px; border-top:1px solid {{ colors.glassBrd }};">
+                                <div sc-camel-on-click="{{ doc.detail.commit }}" style="padding:10px 20px; border-radius:9px; background:{{ colors.relayGradient }}; color:#fff; font-weight:600; font-size:13.5px; cursor:pointer; animation:{{ doc.detail.commitAnim }};">Approve &amp; Commit</div>
+                                <div sc-camel-on-click="{{ doc.detail.reject }}" style="padding:10px 18px; border-radius:9px; background:transparent; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textLo }}; font-size:13.5px; cursor:pointer;">Reject</div>
+                                <input value="{{ doc.detail.rejectNote }}" sc-camel-on-change="{{ doc.detail.onRejectNote }}" placeholder="Rejection note" style="flex:1; padding:9px 11px; border-radius:8px; background:{{ colors.insetBg }}; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textHi }}; font-size:12.5px;">
+                              </div>
+                            </div>
+                          </sc-if>
+                        </div>
+                      </div>
+                    </sc-if>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+
+          <!-- ============ DATABASE PANEL ============ -->
+          <sc-if value="{{ isDatabasePanel }}" hint-placeholder-val="{{ false }}">
+            <div>
+              <h1 style="font-size:22px; font-weight:600; letter-spacing:-0.01em; color:{{ colors.textHi }}; margin:0 0 14px;">Database</h1>
+
+              <div style="display:inline-flex; padding:4px; border-radius:11px; background:{{ colors.insetBg }}; margin-bottom:18px;">
+                <div sc-camel-on-click="{{ setInvoicesSeg }}" style="padding:8px 18px; border-radius:8px; font-size:13px; font-weight:500; cursor:pointer; background:{{ invoiceSegBg }}; color:{{ invoiceSegColor }};">Invoices</div>
+                <div sc-camel-on-click="{{ setReceiptsSeg }}" style="padding:8px 18px; border-radius:8px; font-size:13px; font-weight:500; cursor:pointer; background:{{ receiptSegBg }}; color:{{ receiptSegColor }};">Receipts</div>
+              </div>
+
+              <sc-if value="{{ showInvoices }}" hint-placeholder-val="{{ true }}">
+                <div>
+                  <sc-if value="{{ invoicesEmpty }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:{{ colors.textLo }}; padding:40px; text-align:center;">No committed invoices yet.</div>
+                  </sc-if>
+                  <div style="display:flex; flex-direction:column; gap:14px;">
+                    <sc-for list="{{ invoiceCards }}" as="inv" hint-placeholder-count="0">
+                      <div style="border-radius:16px; background:{{ colors.glassBg }}; border:1px solid {{ colors.glassBrd }}; padding:18px; transition:border-color 200ms ease, transform 200ms ease;" style-hover="border-color:{{ colors.glassBrdH }}; transform:translateY(-2px);">
+                        <div style="font-size:15px; margin-bottom:12px;"><b style="color:{{ colors.textHi }};">{{ inv.vendor }}</b><span style="color:{{ colors.textLo }};"> — {{ inv.invoiceNo }}</span></div>
+                        <div style="display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin-bottom:14px;">
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }}; border-top:2px solid #3b82f6;"><div style="font-size:10px; color:{{ colors.textLo }};">SUBTOTAL</div><div style="font-family:'JetBrains Mono',monospace; font-size:14px; color:{{ colors.relay3 }};">{{ inv.subtotalFmt }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }}; border-top:2px solid #3b82f6;"><div style="font-size:10px; color:{{ colors.textLo }};">TAX</div><div style="font-family:'JetBrains Mono',monospace; font-size:14px; color:{{ colors.relay3 }};">{{ inv.taxFmt }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }}; border-top:2px solid #3b82f6;"><div style="font-size:10px; color:{{ colors.textLo }};">TOTAL</div><div style="font-family:'JetBrains Mono',monospace; font-size:14px; color:{{ colors.relay3 }};">{{ inv.totalFmt }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }};"><div style="font-size:10px; color:{{ colors.textLo }};">DATE</div><div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:{{ colors.textHi }};">{{ inv.date }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }};"><div style="font-size:10px; color:{{ colors.textLo }};">DUE</div><div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:{{ colors.textHi }};">{{ inv.due }}</div></div>
+                        </div>
+                        <div style="border-radius:10px; background:{{ colors.insetBg }}; overflow:hidden; margin-bottom:10px;">
+                          <div style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,0.6fr) minmax(0,1fr) minmax(0,1fr); gap:6px; padding:8px 12px; font-size:10.5px; color:{{ colors.textLo }};">
+                            <div>DESCRIPTION</div><div>QTY</div><div>UNIT PRICE</div><div>LINE TOTAL</div>
+                          </div>
+                          <sc-for list="{{ inv.items }}" as="it" hint-placeholder-count="2">
+                            <div style="display:grid; grid-template-columns:minmax(0,2fr) minmax(0,0.6fr) minmax(0,1fr) minmax(0,1fr); gap:6px; padding:7px 12px; font-size:12.5px; color:{{ colors.textHi }}; border-top:1px solid rgba(96,165,250,0.12); font-family:'JetBrains Mono',monospace;">
+                              <div style="font-family:'Inter',sans-serif;">{{ it.description }}</div><div>{{ it.qty }}</div><div>{{ it.unitPriceFmt }}</div><div>{{ it.lineTotalFmt }}</div>
+                            </div>
+                          </sc-for>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px;">
+                          <div style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:{{ colors.textLo }};">Source: {{ inv.sourceFilename }}</div>
+                          <div sc-camel-on-click="{{ inv.togglePreview }}" style="padding:6px 12px; border-radius:7px; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textLo }}; font-size:12px; cursor:pointer;">{{ inv.previewLabel }}</div>
+                        </div>
+                        <sc-if value="{{ inv.showPreview }}" hint-placeholder-val="{{ false }}">
+                          <div style="margin-top:12px; border-radius:12px; background:#fdfdfd; padding:16px;">
+                            <sc-for list="{{ inv.previewPages }}" as="pg" hint-placeholder-count="1">
+                              <div style="background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,0.12); padding:18px; font-family:Georgia,serif; margin-bottom:10px;">
+                                <img src="{{ pg.src }}" style="display:block; width:100%; height:auto; border-radius:2px;" />
+                              </div>
+                            </sc-for>
+                          </div>
+                        </sc-if>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ showReceipts }}" hint-placeholder-val="{{ false }}">
+                <div>
+                  <sc-if value="{{ receiptsEmpty }}" hint-placeholder-val="{{ false }}">
+                    <div style="color:{{ colors.textLo }}; padding:40px; text-align:center;">No committed receipts yet.</div>
+                  </sc-if>
+                  <div style="display:flex; flex-direction:column; gap:14px;">
+                    <sc-for list="{{ receiptCards }}" as="rc" hint-placeholder-count="0">
+                      <div style="border-radius:16px; background:{{ colors.glassBg }}; border:1px solid {{ colors.glassBrd }}; padding:18px;">
+                        <div style="font-size:15px; margin-bottom:12px;"><b style="color:{{ colors.textHi }};">{{ rc.merchant }}</b></div>
+                        <div style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; margin-bottom:14px;">
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }}; border-top:2px solid #3b82f6;"><div style="font-size:10px; color:{{ colors.textLo }};">TOTAL</div><div style="font-family:'JetBrains Mono',monospace; font-size:14px; color:{{ colors.relay3 }};">{{ rc.totalFmt }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }};"><div style="font-size:10px; color:{{ colors.textLo }};">DATE</div><div style="font-family:'JetBrains Mono',monospace; font-size:13px; color:{{ colors.textHi }};">{{ rc.date }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }};"><div style="font-size:10px; color:{{ colors.textLo }};">PAYMENT</div><div style="font-size:13px; color:{{ colors.textHi }};">{{ rc.payment }}</div></div>
+                          <div style="padding:10px; border-radius:8px; background:{{ colors.insetBg }};"><div style="font-size:10px; color:{{ colors.textLo }};">CURRENCY</div><div style="font-size:13px; color:{{ colors.textHi }};">{{ rc.currency }}</div></div>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:12px;">
+                          <div style="font-size:11.5px; font-family:'JetBrains Mono',monospace; color:{{ colors.textLo }};">Source: {{ rc.sourceFilename }}</div>
+                          <div sc-camel-on-click="{{ rc.togglePreview }}" style="padding:6px 12px; border-radius:7px; border:1px solid {{ colors.glassBrd }}; color:{{ colors.textLo }}; font-size:12px; cursor:pointer;">{{ rc.previewLabel }}</div>
+                        </div>
+                        <sc-if value="{{ rc.showPreview }}" hint-placeholder-val="{{ false }}">
+                          <div style="margin-top:12px; border-radius:12px; background:#fdfdfd; padding:16px;">
+                            <sc-for list="{{ rc.previewPages }}" as="pg" hint-placeholder-count="1">
+                              <div style="background:#fff; border-radius:4px; box-shadow:0 2px 10px rgba(0,0,0,0.12); padding:18px; font-family:'Courier New',monospace; margin-bottom:10px;">
+                                <img src="{{ pg.src }}" style="display:block; width:100%; height:auto; border-radius:2px;" />
+                              </div>
+                            </sc-for>
+                          </div>
+                        </sc-if>
+                      </div>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+
+            </div>
+          </sc-if>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+
+const NODE_KEYS = ['load_doc','classify','extract','mark_unsupported','validate','repair_extract','queue_for_review','queue_failed'];
+
+const DARK = {
+  bg:'#0f172a', surface:'#1e293b', glassBg:'rgba(30,41,59,0.55)', glassBrd:'rgba(96,165,250,0.14)',
+  glassBrdH:'rgba(96,165,250,0.30)', insetBg:'rgba(15,23,42,0.50)', textHi:'#f1f5f9', textLo:'#94a3b8',
+  shadow:'0 8px 32px rgba(2,6,23,0.35)', glow1:'rgba(59,130,246,0.10)', glow2:'rgba(30,64,175,0.12)',
+  bannerTile:'#1e293b', bannerStroke:'#1e293b', bannerStrokeW:'0', bannerText:'#f1f5f9',
+  iconTile:'#1e293b', iconTileStroke:'#1e293b',
+  relay1:'#1e40af', relay2:'#3b82f6', relay3:'#60a5fa',
+  relayGradient:'linear-gradient(90deg,#1e40af,#3b82f6,#60a5fa)',
+};
+const LIGHT = {
+  bg:'#f8fafc', surface:'#eff6ff', glassBg:'rgba(239,246,255,0.60)', glassBrd:'rgba(59,130,246,0.18)',
+  glassBrdH:'rgba(30,64,175,0.35)', insetBg:'rgba(219,234,254,0.45)', textHi:'#0f172a', textLo:'#475569',
+  shadow:'0 8px 32px rgba(30,64,175,0.10)', glow1:'rgba(96,165,250,0.12)', glow2:'rgba(219,234,254,0.8)',
+  bannerTile:'#eff6ff', bannerStroke:'#dbeafe', bannerStrokeW:'1.5', bannerText:'#0f172a',
+  iconTile:'#eff6ff', iconTileStroke:'#dbeafe',
+  relay1:'#1e40af', relay2:'#3b82f6', relay3:'#60a5fa',
+  relayGradient:'linear-gradient(90deg,#1e40af,#3b82f6,#60a5fa)',
+};
+
+function deepClone(o) { return JSON.parse(JSON.stringify(o)); }
+function titleStatus(s) { return (s||'').split('_').join(' ').replace(/\b\w/g, c => c.toUpperCase()); }
+
+class Component extends DCLogic {
+  state = {
+    theme: 'dark',
+    health: { db_ok: true, db_error: null },
+    splashDone: false,
+    splashOpacity: 1,
+    activePanel: 'upload',
+    direction: 1,
+    store: null,
+    upload: { stage: 'idle', file: null, error: null, shake: false },
+    run: null,
+    openTraces: {},
+    reviewFilter: { needs_review: true, failed_validation: true, unsupported: false, committed: false, rejected: false },
+    reviewOpenId: null,
+    editPayloads: {},
+    editValidation: {},
+    rejectNotes: {},
+    shakeCommitId: null,
+    sealing: null,
+    dbSegment: 'invoices',
+    dbOpenPreviewId: {},
+    ready: false,
+  };
+
+  componentDidMount() {
+    this._timers = {};
+    this._runCancel = null;
+    this.fileInputRef = React.createRef();
+    const wait = () => {
+      if (window.VeloAdapter) {
+        this.adapter = window.VeloAdapter;
+        this.setState({ store: this._emptyStore(), ready: true });
+        this.loadStore();
+        this.refreshHealth();
+        this._healthTimer = setInterval(() => this.refreshHealth(), 6000);
+      } else {
+        setTimeout(wait, 20);
+      }
+    };
+    wait();
+    setTimeout(() => this.setState({ splashOpacity: 0 }), 750);
+    setTimeout(() => this.setState({ splashDone: true }), 1150);
+  }
+
+  componentWillUnmount() {
+    if (this._healthTimer) clearInterval(this._healthTimer);
+    if (this._runCancel) { this._runCancel(); this._runCancel = null; }
+    Object.values(this._timers || {}).forEach(clearTimeout);
+  }
+
+  _emptyStore() {
+    return { documents: [], invoices: [], receipts: [], extractions: {}, previews: {} };
+  }
+
+  // ---- live data loaders ----------------------------------------------------
+  loadStore = async () => {
+    try {
+      const [documents, invoices, receipts] = await Promise.all([
+        this.adapter.getDocuments(),
+        this.adapter.getInvoices(),
+        this.adapter.getReceipts(),
+      ]);
+      this.setState(s => ({ store: Object.assign({}, s.store, { documents, invoices, receipts }) }));
+    } catch (e) { /* keep last-known store on transient failure */ }
+  };
+
+  refreshHealth = async () => {
+    const health = await this.adapter.getHealth();
+    this.setState({ health });
+  };
+
+  _ensurePreview = async (docId) => {
+    if (this.state.store.previews[docId]) return;
+    let pv;
+    try { pv = await this.adapter.getPreview(docId); } catch (e) { pv = { pageCount: 0, pages: [] }; }
+    this.setState(s => ({ store: Object.assign({}, s.store, {
+      previews: Object.assign({}, s.store.previews, { [docId]: pv }),
+    }) }));
+  };
+
+  toggleTheme = () => {
+    this.setState(s => ({ theme: s.theme === 'dark' ? 'light' : 'dark' }));
+  };
+
+  pulseLogo = () => {};
+
+  setPanel = (name) => {
+    const order = ['upload', 'review', 'database'];
+    const dir = order.indexOf(name) >= order.indexOf(this.state.activePanel) ? 1 : -1;
+    this.setState({ activePanel: name, direction: dir });
+  };
+
+  jumpToReview = () => this.setPanel('review');
+
+  browseFiles = () => { if (this.fileInputRef.current) this.fileInputRef.current.click(); };
+
+  rejectFile = (msg) => {
+    this.setState(s => ({ upload: Object.assign({}, s.upload, { error: msg, shake: true }) }));
+    setTimeout(() => this.setState(s => ({ upload: Object.assign({}, s.upload, { shake: false }) })), 450);
+  };
+
+  acceptFile = (file) => {
+    const mime = file.type;
+    const assumedPages = mime === 'application/pdf' ? Math.max(1, Math.round(file.size / 60000)) : 1;
+    const err = this.adapter.validateFile(file, assumedPages);
+    if (err) { this.rejectFile(err); return; }
+    const fileInfo = { filename: file.name, sizeMb: (file.size / (1024 * 1024)).toFixed(1), pages: assumedPages, mime, raw: file };
+    this.setState({ upload: { stage: 'file_card', file: fileInfo, error: null, shake: false } });
+  };
+
+  onFileInputChange = (e) => { const f = e.target.files && e.target.files[0]; if (f) this.acceptFile(f); e.target.value = ''; };
+  onDrop = (e) => { e.preventDefault(); const f = e.dataTransfer.files && e.dataTransfer.files[0]; if (f) this.acceptFile(f); };
+  onDragOver = (e) => { e.preventDefault(); };
+  onDragLeave = (e) => { e.preventDefault(); };
+
+  handleSampleClick = async (sampleId) => {
+    let res;
+    try { res = await this.adapter.uploadSample(sampleId); }
+    catch (e) { this.rejectFile(String((e && e.message) || e)); return; }
+    if (res && res.error) { this.rejectFile(res.error); return; }
+    const fileInfo = { filename: res.filename, sizeMb: '', pages: res.pages, mime: res.mime };
+    this.setState({ upload: { stage: 'file_card', file: fileInfo, error: null, shake: false } });
+    this._beginRun(res.document_id, res.filename);
+  };
+
+  startRunClick = async () => {
+    const f = this.state.upload.file;
+    if (!f || !f.raw) return;
+    let res;
+    try { res = await this.adapter.uploadFile(f.raw); }
+    catch (e) { this.rejectFile(String((e && e.message) || e)); return; }
+    if (res && res.error) { this.rejectFile(res.error); return; }
+    this._beginRun(res.document_id, res.filename || f.filename);
+  };
+
+  // ---- SSE-driven pipeline run ---------------------------------------------
+  _beginRun = (docId, filename) => {
+    if (this._runCancel) { this._runCancel(); this._runCancel = null; }
+    this._runDocId = docId;
+    this.setState({
+      run: { docId, filename, nodes: [], stepIndex: 0, animating: true, terminal: null, errors: [], docType: null, llm_calls: 0 },
+      openTraces: {},
+    });
+    this._runCancel = this.adapter.processDocument(docId, {
+      onNode: (d) => this._onRunNode(d.node, d.summary),
+      onFinal: (d) => this._onRunFinal(d),
+      onError: (d) => this._onRunError(d),
+    });
+  };
+
+  _onRunNode = (node, summary) => {
+    const entry = Object.assign({ key: node }, summary || {});
+    this.setState(s => {
+      if (!s.run) return {};
+      const nodes = s.run.nodes.concat([entry]);
+      // The just-arrived node is shown "active" (stepIndex points at it), then
+      // settles to "lit" after a short glint — reproducing the mock's per-node
+      // animation from real node-completion events.
+      return { run: Object.assign({}, s.run, { nodes, stepIndex: nodes.length - 1, animating: true }) };
+    }, () => {
+      setTimeout(() => this.setState(s => {
+        if (!s.run) return {};
+        return { run: Object.assign({}, s.run, { stepIndex: s.run.nodes.length, animating: false }) };
+      }), 260);
+    });
+  };
+
+  _onRunFinal = (data) => {
+    this._runCancel = null;
+    this._lastRunDocId = this._runDocId;
+    this.setState(s => {
+      if (!s.run) return {};
+      const lastTyped = s.run.nodes.slice().reverse().find(n => n.doc_type);
+      const docType = (lastTyped && lastTyped.doc_type) || null;
+      return { run: Object.assign({}, s.run, {
+        terminal: data.final_status, errors: data.validation_errors || [],
+        llm_calls: data.llm_calls || s.run.llm_calls, docType,
+        animating: false, stepIndex: s.run.nodes.length,
+      }) };
+    });
+    this.loadStore();
+  };
+
+  _onRunError = (data) => {
+    this._runCancel = null;
+    this.setState(s => {
+      if (!s.run) return {};
+      return { run: Object.assign({}, s.run, {
+        terminal: 'failed_validation', errors: [(data && data.message) || 'Pipeline error'],
+        animating: false, stepIndex: s.run.nodes.length,
+      }) };
+    });
+    this.loadStore();
+  };
+
+  toggleTrace = (idx) => {
+    this.setState(s => ({ openTraces: Object.assign({}, s.openTraces, { [idx]: !s.openTraces[idx] }) }));
+  };
+
+  resetUpload = () => {
+    if (this._runCancel) { this._runCancel(); this._runCancel = null; }
+    this.setState({ upload: { stage: 'idle', file: null, error: null, shake: false }, run: null, openTraces: {} });
+  };
+
+  reviewNowClick = () => {
+    const docId = this._lastRunDocId;
+    const doc = this.state.store.documents.find(d => d.id === docId);
+    const status = doc ? doc.status : 'needs_review';
+    this.setState(s => ({
+      activePanel: 'review', direction: 1,
+      reviewFilter: Object.assign({}, s.reviewFilter, { [status]: true }),
+      reviewOpenId: docId,
+      upload: { stage: 'idle', file: null, error: null, shake: false }, run: null,
+    }), () => this._ensureEditPayload(docId));
+  };
+
+  toggleFilterChip = (status) => {
+    this.setState(s => ({ reviewFilter: Object.assign({}, s.reviewFilter, { [status]: !s.reviewFilter[status] }) }));
+  };
+
+  _ensureEditPayload = async (docId) => {
+    this._ensurePreview(docId);
+    if (this.state.editPayloads[docId]) return;
+    let ext = this.state.store.extractions[docId];
+    if (!ext) {
+      try { ext = await this.adapter.getExtraction(docId); }
+      catch (e) { ext = null; }
+      if (ext) {
+        this.setState(s => ({ store: Object.assign({}, s.store, {
+          extractions: Object.assign({}, s.store.extractions, { [docId]: ext }),
+        }) }));
+      }
+    }
+    const payload = ext ? deepClone(ext.payload) : null;
+    if (!payload) return;
+    const docRow = this.state.store.documents.find(d => d.id === docId);
+    const docType = (ext && ext.doc_type) || (docRow && docRow.doc_type);
+    const result = this.adapter.revalidate(docType, payload);
+    this.setState(s => ({
+      editPayloads: Object.assign({}, s.editPayloads, { [docId]: payload }),
+      editValidation: Object.assign({}, s.editValidation, { [docId]: result }),
+    }));
+  };
+
+  toggleReviewOpen = (docId) => {
+    if (this.state.reviewOpenId === docId) { this.setState({ reviewOpenId: null }); return; }
+    this.setState({ reviewOpenId: docId });
+    this._ensureEditPayload(docId);
+  };
+
+  _scheduleValidation = (docId) => {
+    clearTimeout(this._timers[docId]);
+    this._timers[docId] = setTimeout(() => this._runValidationNow(docId), 200);
+  };
+
+  _runValidationNow = (docId) => {
+    const docType = this.state.store.documents.find(d => d.id === docId).doc_type;
+    const payload = this.state.editPayloads[docId];
+    const result = this.adapter.revalidate(docType, payload);
+    this.setState(s => ({ editValidation: Object.assign({}, s.editValidation, { [docId]: result }) }));
+    return result;
+  };
+
+  updateField = (docId, field, value) => {
+    this.setState(s => {
+      const p = Object.assign({}, s.editPayloads[docId], { [field]: value });
+      return { editPayloads: Object.assign({}, s.editPayloads, { [docId]: p }) };
+    }, () => this._scheduleValidation(docId));
+  };
+
+  updateItem = (docId, idx, field, value) => {
+    this.setState(s => {
+      const p = deepClone(s.editPayloads[docId]);
+      p.items[idx][field] = value;
+      return { editPayloads: Object.assign({}, s.editPayloads, { [docId]: p }) };
+    }, () => this._scheduleValidation(docId));
+  };
+
+  addItemRow = (docId) => {
+    this.setState(s => {
+      const p = deepClone(s.editPayloads[docId]);
+      p.items.push({ description: '', qty: '', unit_price: '', line_total: '' });
+      return { editPayloads: Object.assign({}, s.editPayloads, { [docId]: p }) };
+    }, () => this._scheduleValidation(docId));
+  };
+
+  removeItemRow = (docId, idx) => {
+    this.setState(s => {
+      const p = deepClone(s.editPayloads[docId]);
+      p.items.splice(idx, 1);
+      return { editPayloads: Object.assign({}, s.editPayloads, { [docId]: p }) };
+    }, () => this._scheduleValidation(docId));
+  };
+
+  setRejectNote = (docId, val) => {
+    this.setState(s => ({ rejectNotes: Object.assign({}, s.rejectNotes, { [docId]: val }) }));
+  };
+
+  approveCommit = async (docId) => {
+    clearTimeout(this._timers[docId]);
+    const result = this._runValidationNow(docId);
+    if (result.all_errors.length > 0) {
+      this.setState({ shakeCommitId: docId });
+      setTimeout(() => this.setState({ shakeCommitId: null }), 500);
+      return;
+    }
+    const docRow = this.state.store.documents.find(d => d.id === docId);
+    const docType = docRow && docRow.doc_type;
+    const payload = this.state.editPayloads[docId];
+    let res;
+    try { res = await this.adapter.commit(docId, docType, payload); }
+    catch (e) { res = { success: false, errors: [String((e && e.message) || e)] }; }
+    if (!res || !res.success) {
+      // Backend rejected the commit — flash the button (client already passed
+      // its own revalidate, so this is a server-side disagreement).
+      this.setState({ shakeCommitId: docId });
+      setTimeout(() => this.setState({ shakeCommitId: null }), 500);
+      return;
+    }
+    this.setState({ sealing: { docId, type: 'ok' } });
+    setTimeout(() => {
+      this.setState({ reviewOpenId: null, sealing: null });
+      this.loadStore();
+    }, 550);
+  };
+
+  rejectDoc = async (docId) => {
+    const note = (this.state.rejectNotes[docId] || '').trim() || 'Rejected by user';
+    try { await this.adapter.reject(docId, note); } catch (e) { /* still animate + reload */ }
+    this.setState({ sealing: { docId, type: 'err' } });
+    setTimeout(() => {
+      this.setState({ reviewOpenId: null, sealing: null });
+      this.loadStore();
+    }, 550);
+  };
+
+  setDbSegment = (seg) => this.setState({ dbSegment: seg });
+  toggleDbPreview = (id, documentId) => {
+    this.setState(s => ({ dbOpenPreviewId: Object.assign({}, s.dbOpenPreviewId, { [id]: !s.dbOpenPreviewId[id] }) }));
+    if (documentId != null) this._ensurePreview(documentId);
+  };
+
+  _renderPreviewPages(preview) {
+    // Live mode: preview is { pageCount, pages: [{ num, src }] } from the backend
+    // (real rendered PNG pages). Return image descriptors the template renders
+    // as <img src>.
+    if (!preview || !preview.pages) return [];
+    return preview.pages.map(p => ({ num: p.num, src: p.src }));
+  }
+
+  renderVals() {
+    const state = this.state;
+    if (!state.ready) {
+      return { showSplash: true, splashOpacity: state.splashOpacity, colors: DARK, isUploadPanel: false, isReviewPanel: false, isDatabasePanel: false };
+    }
+    const colors = state.theme === 'dark' ? DARK : LIGHT;
+    const adapter = this.adapter;
+    const store = state.store;
+
+    const queueCount = store.documents.filter(d => d.status === 'needs_review' || d.status === 'failed_validation').length;
+
+    // ---- top bar / nav ----
+    const navDefs = [
+      { key: 'upload', label: 'Upload', icon: '\u2191' },
+      { key: 'review', label: 'Review Queue', icon: '\u2713', showBadge: true, badgeCount: queueCount },
+      { key: 'database', label: 'Database', icon: '\u25a4' },
+    ];
+    const navItems = navDefs.map(n => {
+      const active = state.activePanel === n.key;
+      return {
+        onClick: () => this.setPanel(n.key), label: n.label, icon: n.icon,
+        bg: active ? colors.glassBrd : 'transparent', barBg: colors.relay3, barOpacity: active ? 1 : 0,
+        textColor: active ? colors.textHi : colors.textLo, showBadge: !!n.showBadge && n.badgeCount > 0, badgeCount: n.badgeCount,
+      };
+    });
+
+    const sampleDefs = [
+      { id: 'invoice_clean', label: 'Invoice (Clean)' },
+      { id: 'receipt', label: 'Receipt' },
+      { id: 'invoice_broken', label: 'Invoice (Broken Totals)' },
+      { id: 'purchase_order', label: 'Purchase Order' },
+    ];
+    const sampleChips = sampleDefs.map(s => ({ label: s.label, onClick: () => this.handleSampleClick(s.id) }));
+
+    // ---- panel transition ----
+    const isUploadPanel = state.activePanel === 'upload';
+    const isReviewPanel = state.activePanel === 'review';
+    const isDatabasePanel = state.activePanel === 'database';
+
+    // ---- upload ----
+    const showDropzone = !state.run && state.upload.stage === 'idle';
+    const showFileCard = !state.run && state.upload.stage === 'file_card';
+    const showMap = !!state.run;
+    const mimeIcons = { 'application/pdf': '\ud83d\udcc4', 'image/png': '\ud83d\uddbc', 'image/jpeg': '\ud83d\uddbc' };
+
+    let runVals = {};
+    if (state.run) {
+      const run = state.run;
+      const taken = new Set(run.nodes.map(n => n.key));
+      const litKeys = new Set(run.nodes.slice(0, run.stepIndex).map(n => n.key));
+      const activeKey = run.animating && run.nodes[run.stepIndex] ? run.nodes[run.stepIndex].key : null;
+      const guardTaken = taken.has('mark_unsupported');
+
+      function statusOf(key) {
+        if (activeKey === key) return 'active';
+        if (litKeys.has(key)) return 'lit';
+        if (!taken.has(key)) {
+          if ((key === 'mark_unsupported' || key === 'extract') && run.stepIndex >= 2) return 'dimmed';
+          if (['repair_extract', 'queue_for_review', 'queue_failed'].includes(key) && (run.stepIndex >= 4 || guardTaken)) return 'dimmed';
+          return 'idle';
+        }
+        return 'idle';
+      }
+      const statusStyle = (st) => {
+        if (st === 'active' || st === 'lit') return { bg: colors.relayGradient, border: 'transparent', textColor: '#fff', opacity: 1 };
+        if (st === 'dimmed') return { bg: colors.insetBg, border: colors.glassBrd, textColor: colors.textLo, opacity: 0.35 };
+        return { bg: colors.insetBg, border: colors.glassBrd, textColor: colors.textLo, opacity: 1 };
+      };
+
+      const mainKeys = ['load_doc', 'classify', 'extract', 'validate', 'queue_for_review'];
+      const mainTrackNodes = mainKeys.map((k, i) => {
+        const st = statusOf(k);
+        const sty = statusStyle(st);
+        return {
+          onClick: () => this.toggleTrace(this._traceIdxFor(run, k)),
+          label: k, bg: sty.bg, border: sty.border, textColor: sty.textColor, opacity: sty.opacity,
+          showConnector: i < mainKeys.length - 1,
+          connectorBg: (st === 'lit' || st === 'active') ? colors.relay3 : colors.glassBrd,
+        };
+      });
+
+      const muSt = statusOf('mark_unsupported'); const muSty = statusStyle(muSt);
+      const repSt = statusOf('repair_extract'); const repSty = statusStyle(repSt);
+      const qfSt = statusOf('queue_failed'); const qfSty = statusStyle(qfSt);
+
+      const traceRows = run.nodes.slice(0, run.stepIndex).map((n, i) => {
+        const open = !!state.openTraces[i];
+        const json = JSON.stringify({ doc_type: n.doc_type, llm_calls: n.llm_calls, validation_errors: n.validation_errors, repair_attempted: n.repair_attempted }, null, 2);
+        return { toggle: () => this.toggleTrace(i), label: n.key, open, json, chevron: open ? '\u25be' : '\u25b8' };
+      });
+
+      const llmCallsDisplay = run.stepIndex > 0 ? Math.min(3, run.nodes[run.stepIndex - 1].llm_calls || 0) : 0;
+      const showTerminal = !!run.terminal && !run.animating;
+      const terminalType = showTerminal ? run.terminal : null;
+
+      runVals = {
+        runFilename: run.filename, llmCallsDisplay,
+        mainTrackNodes,
+        branchGuardConnBg: (muSt === 'lit' || muSt === 'active') ? '#fbbf24' : colors.glassBrd,
+        markUnsupportedBg: muSty.bg, markUnsupportedBorder: muSty.border, markUnsupportedTextColor: muSty.textColor, markUnsupportedOpacity: muSty.opacity,
+        markUnsupportedClick: () => this.toggleTrace(this._traceIdxFor(run, 'mark_unsupported')),
+        repairConnBg: (repSt === 'lit' || repSt === 'active') ? '#fbbf24' : colors.glassBrd,
+        repairBg: repSty.bg, repairBorder: repSt === 'idle' ? colors.glassBrd : '#fbbf24', repairTextColor: repSty.textColor, repairOpacity: repSty.opacity,
+        repairClick: () => this.toggleTrace(this._traceIdxFor(run, 'repair_extract')),
+        showRepairTag: repSt === 'lit' || repSt === 'active',
+        failedConnBg: (qfSt === 'lit' || qfSt === 'active') ? '#f87171' : colors.glassBrd,
+        queueFailedBg: qfSty.bg, queueFailedBorder: qfSty.border, queueFailedTextColor: qfSty.textColor, queueFailedOpacity: qfSty.opacity,
+        queueFailedClick: () => this.toggleTrace(this._traceIdxFor(run, 'queue_failed')),
+        hasTraceRows: traceRows.length > 0, traceRows,
+        showTerminal,
+        isNeedsReview: terminalType === 'needs_review', isFailedValidation: terminalType === 'failed_validation', isUnsupported: terminalType === 'unsupported',
+        terminalErrors: run.errors || [],
+        terminalDocType: run.docType || '—',
+        reviewNowClick: this.reviewNowClick, resetUpload: this.resetUpload,
+      };
+    }
+
+    // ---- review queue ----
+    const filterDefs = [
+      { key: 'needs_review', label: 'Needs Review' },
+      { key: 'failed_validation', label: 'Failed Validation' },
+      { key: 'unsupported', label: 'Unsupported' },
+      { key: 'committed', label: 'Committed' },
+      { key: 'rejected', label: 'Rejected' },
+    ];
+    const filterChips = filterDefs.map(f => {
+      const active = state.reviewFilter[f.key];
+      return {
+        onClick: () => this.toggleFilterChip(f.key), label: f.label,
+        bg: active ? colors.glassBrdH : colors.glassBg, border: active ? colors.relay3 : colors.glassBrd,
+        textColor: active ? colors.textHi : colors.textLo,
+      };
+    });
+
+    const statusColorMap = {
+      needs_review: colors.relay3, failed_validation: '#f87171', rejected: '#f87171', unsupported: '#fbbf24', committed: '#34d399',
+    };
+
+    const activeStatuses = new Set(Object.keys(state.reviewFilter).filter(k => state.reviewFilter[k]));
+    const filteredDocs = store.documents.filter(d => activeStatuses.has(d.status));
+
+    const reviewDocs = filteredDocs.map(doc => {
+      const isOpen = state.reviewOpenId === doc.id;
+      let detail = null;
+      if (isOpen) {
+        const ext = store.extractions[doc.id];
+        const preview = store.previews[doc.id];
+        const pages = this._renderPreviewPages(preview);
+        if (!ext) {
+          detail = { noExtraction: true, hasExtraction: false, pages, pageCount: preview ? preview.pageCount : 1 };
+        } else {
+          const payload = state.editPayloads[doc.id] || ext.payload;
+          const validation = state.editValidation[doc.id] || { field_errors: {}, item_errors: [], all_errors: [] };
+          const isInvoice = doc.doc_type === 'invoice';
+          const fieldDefs = isInvoice
+            ? [
+                { key: 'vendor', label: 'Vendor', mono: false },
+                { key: 'invoice_no', label: 'Invoice No', mono: true },
+                { key: 'invoice_date', label: 'Invoice Date', mono: true },
+                { key: 'due_date', label: 'Due Date', mono: true },
+                { key: 'currency', label: 'Currency', mono: true },
+                { key: 'subtotal', label: 'Subtotal', mono: true },
+                { key: 'tax', label: 'Tax', mono: true },
+                { key: 'total', label: 'Total', mono: true },
+              ]
+            : [
+                { key: 'merchant', label: 'Merchant', mono: false },
+                { key: 'purchase_date', label: 'Purchase Date', mono: true },
+                { key: 'currency', label: 'Currency', mono: true },
+                { key: 'total', label: 'Total', mono: true },
+                { key: 'payment_method', label: 'Payment Method', mono: false },
+              ];
+          const fields = fieldDefs.map(fd => {
+            const errs = validation.field_errors[fd.key] || [];
+            const hasError = errs.length > 0;
+            return {
+              span: '', label: fd.label, value: payload[fd.key] != null ? String(payload[fd.key]) : '',
+              onChange: (e) => this.updateField(doc.id, fd.key, e.target.value),
+              fontFamily: fd.mono ? "'JetBrains Mono',monospace" : "'Inter',sans-serif",
+              borderColor: hasError ? '#f87171' : colors.glassBrd,
+              badgeColor: hasError ? '#f87171' : '#34d399', badgeTitle: hasError ? errs.join(' ') : 'Valid',
+              hasError, error: errs.join(' '), errId: 'err_' + doc.id + '_' + fd.key,
+            };
+          });
+          let items = [];
+          let itemsStatusText = ''; let itemsStatusColor = colors.textLo;
+          if (isInvoice) {
+            items = (payload.items || []).map((it, idx) => {
+              const errs = (validation.item_errors && validation.item_errors[idx]) || [];
+              const hasError = errs.length > 0;
+              return {
+                description: it.description || '', qty: it.qty != null ? String(it.qty) : '',
+                unit_price: it.unit_price != null ? String(it.unit_price) : '', line_total: it.line_total != null ? String(it.line_total) : '',
+                onDesc: (e) => this.updateItem(doc.id, idx, 'description', e.target.value),
+                onQty: (e) => this.updateItem(doc.id, idx, 'qty', e.target.value),
+                onUnit: (e) => this.updateItem(doc.id, idx, 'unit_price', e.target.value),
+                onLineTotal: (e) => this.updateItem(doc.id, idx, 'line_total', e.target.value),
+                onRemove: () => this.removeItemRow(doc.id, idx),
+                lineBorder: hasError ? '#f87171' : colors.glassBrd, hasError, error: errs.join(' '),
+              };
+            });
+            const itemErrCount = (validation.item_errors || []).reduce((a, e) => a + e.length, 0);
+            const subtotalErrs = (validation.field_errors.subtotal || []).length;
+            const totalErrs = (validation.field_errors.total || []).length;
+            if (itemErrCount === 0 && subtotalErrs === 0 && totalErrs === 0) {
+              itemsStatusText = 'Line items valid'; itemsStatusColor = '#34d399';
+            } else {
+              itemsStatusText = validation.all_errors.filter(e => !e.startsWith('Vendor') && !e.startsWith('Invoice number')).join('  \u2022  ');
+              itemsStatusColor = '#f87171';
+            }
+          }
+          const allClean = validation.all_errors.length === 0;
+          detail = {
+            hasExtraction: true, noExtraction: false, pages, pageCount: preview ? preview.pageCount : 1,
+            isInvoice, fields, items,
+            itemsStatusText, itemsStatusColor,
+            addItem: () => this.addItemRow(doc.id),
+            commit: () => this.approveCommit(doc.id),
+            reject: () => this.rejectDoc(doc.id),
+            rejectNote: state.rejectNotes[doc.id] || '',
+            onRejectNote: (e) => this.setRejectNote(doc.id, e.target.value),
+            commitAnim: state.shakeCommitId === doc.id ? 'vr-shake 400ms ease' : (allClean ? 'vr-glow 2.2s ease infinite' : 'none'),
+          };
+        }
+      }
+      const sealing = state.sealing && state.sealing.docId === doc.id;
+      return {
+        filename: doc.filename, docType: doc.doc_type || '\u2014', pages: doc.pages, llmCalls: doc.llm_calls,
+        hasNote: !!doc.note, note: doc.note,
+        statusLabel: titleStatus(doc.status), statusColor: statusColorMap[doc.status] || colors.textLo,
+        statusBg: (statusColorMap[doc.status] || colors.textLo) + '26',
+        showReviewBtn: doc.status === 'needs_review' || doc.status === 'failed_validation',
+        reviewLabel: isOpen ? 'Close' : 'Review', toggleOpen: () => this.toggleReviewOpen(doc.id),
+        isOpen, detail, sealOpacity: sealing ? 0.4 : 1,
+        cardBg: colors.glassBg, cardBorder: isOpen ? colors.glassBrdH : colors.glassBrd,
+      };
+    });
+
+    // ---- database ----
+    const invoiceCards = store.invoices.map(inv => {
+      const showPreview = !!state.dbOpenPreviewId[inv.id];
+      const preview = store.previews[inv.document_id];
+      return {
+        vendor: inv.vendor, invoiceNo: inv.invoice_no,
+        subtotalFmt: adapter.fmtMoney(inv.subtotal, inv.currency), taxFmt: adapter.fmtMoney(inv.tax, inv.currency), totalFmt: adapter.fmtMoney(inv.total, inv.currency),
+        date: inv.invoice_date || '\u2014', due: inv.due_date || '\u2014',
+        items: inv.items.map(it => ({ description: it.description, qty: it.qty, unitPriceFmt: it.unit_price.toFixed(2), lineTotalFmt: it.line_total.toFixed(2) })),
+        sourceFilename: inv.source_filename, previewLabel: showPreview ? 'Hide Document' : 'View Document',
+        togglePreview: () => this.toggleDbPreview(inv.id, inv.document_id), showPreview,
+        previewPages: showPreview ? this._renderPreviewPages(preview) : [],
+      };
+    });
+    const receiptCards = store.receipts.map(rc => {
+      const showPreview = !!state.dbOpenPreviewId[rc.id];
+      const preview = store.previews[rc.document_id];
+      return {
+        merchant: rc.merchant, totalFmt: adapter.fmtMoney(rc.total, rc.currency),
+        date: rc.purchase_date || '\u2014', payment: rc.payment_method || '\u2014', currency: rc.currency,
+        sourceFilename: rc.source_filename, previewLabel: showPreview ? 'Hide Document' : 'View Document',
+        togglePreview: () => this.toggleDbPreview(rc.id, rc.document_id), showPreview,
+        previewPages: showPreview ? this._renderPreviewPages(preview) : [],
+      };
+    });
+
+    return {
+      showSplash: !state.splashDone, splashOpacity: state.splashOpacity,
+      colors, isDark: state.theme === 'dark', themeIcon: state.theme === 'dark' ? '\ud83c\udf19' : '\u2600\ufe0f',
+      toggleTheme: this.toggleTheme, pulseLogo: this.pulseLogo,
+      bannerH: 42, chevronStyle0: '', chevronStyle1: '', chevronStyle2: '',
+      queueCount, jumpToReview: this.jumpToReview,
+      healthColor: state.health.db_ok ? '#34d399' : '#f87171',
+      healthTitle: state.health.db_ok ? 'Database connection healthy' : 'Database unavailable',
+      showHealthBanner: !state.health.db_ok,
+      healthBannerText: state.health.db_ok ? '' : ('Database unavailable' + (state.health.db_error ? ': ' + state.health.db_error : '')),
+      navItems, sampleChips,
+      isUploadPanel, isReviewPanel, isDatabasePanel,
+      panelOpacity: 1, panelTransform: 'translateX(0)',
+
+      showDropzone, showFileCard, showMap,
+      dropzoneBorder: colors.glassBrd, dropzoneScale: 'scale(1)', dropzoneShakeAnim: state.upload.shake ? 'vr-shake 400ms ease' : 'none',
+      fileInputRef: this.fileInputRef, onFileInputChange: this.onFileInputChange,
+      browseFiles: this.browseFiles, onDragOver: this.onDragOver, onDragLeave: this.onDragLeave, onDrop: this.onDrop,
+      uploadError: state.upload.error,
+      uploadFile: state.upload.file || {}, fileMimeIcon: state.upload.file ? (mimeIcons[state.upload.file.mime] || '\ud83d\udcc4') : '',
+      startRunClick: this.startRunClick,
+
+      ...runVals,
+
+      filterChips, reviewEmpty: reviewDocs.length === 0, reviewDocs,
+
+      invoiceSegBg: state.dbSegment === 'invoices' ? colors.relayGradient : 'transparent',
+      invoiceSegColor: state.dbSegment === 'invoices' ? '#fff' : colors.textLo,
+      receiptSegBg: state.dbSegment === 'receipts' ? colors.relayGradient : 'transparent',
+      receiptSegColor: state.dbSegment === 'receipts' ? '#fff' : colors.textLo,
+      setInvoicesSeg: () => this.setDbSegment('invoices'), setReceiptsSeg: () => this.setDbSegment('receipts'),
+      showInvoices: state.dbSegment === 'invoices', showReceipts: state.dbSegment === 'receipts',
+      invoicesEmpty: invoiceCards.length === 0, receiptsEmpty: receiptCards.length === 0,
+      invoiceCards, receiptCards,
+    };
+  }
+
+  _traceIdxFor(run, key) {
+    for (let i = 0; i < run.stepIndex; i++) if (run.nodes[i].key === key) return i;
+    return -1;
+  }
+}
+
+
+</script>
+
+
+</body></html>

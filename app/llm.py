@@ -45,20 +45,23 @@ def make_image_content_block(file_path: str) -> dict:
 
 
 def make_page_preview_block(file_path: str, mime: str, page: int = 0) -> dict:
-    """Create a content block from a cached page preview PNG."""
-    preview_dir = Path(file_path).parent.parent / "data" / "previews"
-    preview_path = preview_dir / str(Path(file_path).stem) / f"page_{page}.png"
+    """Create an image content block for the given page of the source document.
 
-    if preview_path.exists():
-        return make_image_content_block(str(preview_path))
+    PDFs are rasterised to PNG on the fly (page ``page``); images are sent as-is.
+    Renders directly from the source file so it does not depend on the doc_id
+    keyed preview cache (files on disk are named by uuid, not doc_id).
+    """
+    if mime == "application/pdf":
+        import io
 
-    from app.upload import render_previews
-    content = Path(file_path).read_bytes()
-    previews = render_previews(content, mime, int(Path(file_path).stem))
+        import pypdfium2 as pdfium
 
-    if previews:
-        path = Path(previews[0])
-        data = base64.standard_b64encode(path.read_bytes()).decode("utf-8")
+        pdf = pdfium.PdfDocument(Path(file_path).read_bytes())
+        idx = page if 0 <= page < len(pdf) else 0
+        pil_image = pdf[idx].render(scale=2).to_pil()
+        buf = io.BytesIO()
+        pil_image.save(buf, "PNG")
+        data = base64.standard_b64encode(buf.getvalue()).decode("utf-8")
         return {
             "type": "image",
             "source": {
@@ -68,7 +71,7 @@ def make_page_preview_block(file_path: str, mime: str, page: int = 0) -> dict:
             },
         }
 
-    return make_image_content_block(str(preview_path))
+    return make_image_content_block(file_path)
 
 
 def content_block_for_file(file_path: str, mime: str) -> dict:

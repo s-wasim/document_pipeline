@@ -4,13 +4,12 @@ from pathlib import Path
 
 from langchain_anthropic import ChatAnthropic
 
-MODEL = "claude-sonnet-4-6"
+MODEL = "claude-sonnet-5"
 
 
 def get_llm(temperature: float = 0) -> ChatAnthropic:
     return ChatAnthropic(
         model=MODEL,
-        temperature=temperature,
         max_tokens=4096,
         api_key=os.environ["ANTHROPIC_API_KEY"],
     )

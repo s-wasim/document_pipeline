@@ -6,7 +6,11 @@ from sqlalchemy.orm import sessionmaker
 
 from app.db import Base, Document, Extraction, Receipt
 from app.graph.nodes.unsupported import mark_unsupported
-from app.tabs.review import QUEUE_STATUSES
+
+# Review-queue default (documents awaiting human action). This lived in the old
+# Streamlit review tab; it now drives the frontend Component's default
+# reviewFilter. Kept here as a domain invariant.
+QUEUE_STATUSES = ["needs_review", "failed_validation"]
 
 
 @patch("app.commit.get_session")

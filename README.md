@@ -58,7 +58,7 @@ document_pipeline/
 │   └── tabs/                # Streamlit tab pages
 ├── samples/                 # Generated sample documents
 ├── scripts/                 # Sample generator
-├── tests/                   # pytest suite (55 tests)
+├── tests/                   # pytest suite (69 tests)
 ├── docker-compose.yml
 ├── Dockerfile
 └── requirements.txt
